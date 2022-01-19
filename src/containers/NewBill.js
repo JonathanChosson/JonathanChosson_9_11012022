@@ -43,6 +43,7 @@ export default class NewBill {
       else {
         let errorMessage = document.createElement('p');
         errorMessage.classList.add('text-danger', 'h6');
+        errorMessage.setAttribute('data-testid', 'errorMessage')
         errorMessage.innerText = 'Erreur de format, merci de choisir .jpg, .jpeg ou .png'
         e.target.parentNode.append(errorMessage)
       }

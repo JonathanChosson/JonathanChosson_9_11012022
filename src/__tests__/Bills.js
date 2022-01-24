@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import '@testing-library/jest-dom'
-import { fireEvent, getByTestId, screen } from "@testing-library/dom"
+import { fireEvent, screen } from "@testing-library/dom"
 
 import { ROUTES } from "../constants/routes"
 import { localStorageMock } from "../__mocks__/localStorage.js"

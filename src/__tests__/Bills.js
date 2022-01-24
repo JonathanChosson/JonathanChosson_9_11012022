@@ -3,13 +3,11 @@
  */
 import '@testing-library/jest-dom'
 import { fireEvent, screen } from "@testing-library/dom"
-
 import { ROUTES } from "../constants/routes"
 import { localStorageMock } from "../__mocks__/localStorage.js"
 import store from "../__mocks__/store"
 import { bills } from "../fixtures/bills"
 import Bills from "../containers/Bills"
-
 import BillsUI from "../views/BillsUI.js"
 
 describe("Given I am connected as an employee", () => {
@@ -113,7 +111,7 @@ describe('Given i am an employee', () => {
       expect(modale).toBeTruthy()
     })
 
-    test("fetchjes bill from mock API then return status 200 and data.length = 4", async () => {
+    test("fetches bill from mock API then return status 200 and data.length = 4", async () => {
       const getSpy = jest.spyOn(store, "get")
       const bills = await store.get()
       expect(getSpy).toHaveBeenCalledTimes(1)

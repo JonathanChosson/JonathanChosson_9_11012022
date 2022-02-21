@@ -3,6 +3,7 @@ import { formatDate, formatStatus } from "../app/format.js"
 import Logout from "./Logout.js"
 
 export default class {
+  
   constructor({ document, onNavigate, store, localStorage }) {
     this.document = document
     this.onNavigate = onNavigate
@@ -40,7 +41,7 @@ export default class {
             try {
               return {
                 ...doc,
-                date: formatDate(doc.date),
+                // date: formatDate(doc.date),
                 status: formatStatus(doc.status)
               }
             } catch(e) {
